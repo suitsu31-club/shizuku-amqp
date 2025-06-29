@@ -11,6 +11,3 @@ pub mod error;
 /// tools for rabbitmq
 pub mod rabbitmq;
 
-/// tools for redis
-pub mod redis;
-

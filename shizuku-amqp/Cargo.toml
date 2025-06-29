@@ -11,5 +11,4 @@ amqprs = {workspace = true}
 thiserror = "2.0"
 anyhow = "1.0"
 tracing = "0.1"
-redis = {version = "0.32.2", features = ["tokio-comp", "connection-manager"]}
 rkyv = {version = "0.8.10"}
