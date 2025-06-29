@@ -3,5 +3,6 @@ resolver = "3"
 members = ["shizuku-amqp", "shizuku-amqp-macro"]
 
 [workspace.dependencies]
-kanau = "0.2"
+kanau = {version = "0.2.1", features = ["rkyv", "message"]}
 amqprs = "2.1"
+tokio = {version = "1.45", features = ["full"]}
