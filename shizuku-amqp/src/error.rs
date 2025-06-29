@@ -15,6 +15,10 @@ pub enum Error {
     /// Deserialize Error
     DeserializeError(#[from] kanau::message::DeserializeError),
     
+    #[error("{0}")]
+    /// Error occurred when decoding meta
+    MetaDecodeError(#[from] MetaDecodeError),
+    
     #[error("Business Login Error: {0}")]
     /// Error occurred in business logic. This kind of business error can be solved by retrying.
     BusinessError(anyhow::Error),
@@ -27,3 +31,8 @@ pub enum Error {
     /// Panic in tokio spawn
     TokioPanicError(#[from] tokio::task::JoinError),
 }
+
+#[derive(Debug, Error)]
+#[error("Failed to decode meta: {0}")]
+/// Error occurred when decoding meta
+pub struct MetaDecodeError(#[from] anyhow::Error);
