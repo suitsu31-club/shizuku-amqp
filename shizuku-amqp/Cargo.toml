@@ -1,0 +1,13 @@
+[package]
+name = "shizuku-amqp"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+kanau = {workspace = true}
+amqprs = {workspace = true}
+thiserror = "2.0"
+anyhow = "1.0"
+redis = {version = "0.32.2"}
+rkyv = {version = "0.8.10", features = [], optional = true}

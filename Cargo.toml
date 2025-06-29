@@ -1,6 +1,7 @@
-[package]
-name = "shizuku-amqp"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+resolver = "3"
+members = ["shizuku-amqp", "shizuku-amqp-macro"]
 
-[dependencies]
+[workspace.dependencies]
+kanau = "0.2"
+amqprs = "2.1"
