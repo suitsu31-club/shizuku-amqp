@@ -2,9 +2,6 @@
 /// Tools that used to process AMQP messages
 pub mod event;
 
-/// Tools that used to process AMQP RPC
-pub mod rpc;
-
 /// Ack message with retry
 /// 
 /// **Will panic if failed to ack after max retries**
